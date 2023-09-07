@@ -2,17 +2,12 @@
 /*find the size of various types*/
 int main(void)
 {
-	int i;
-	double d;
-	char c;
-	float f;
-	short s;
-	printf("The size of an integer is: %lu.\n", (unsigned long)sizeof(i));
-	printf("The size of a double is: %lu.\n", (unsigned long)sizeof(d));
-	printf("The size of a char is: %lu.\n", (unsigned long)sizeof(c));
-	printf("The size of a float is: %lu.\n", (unsigned long)sizeof(i));
-        printf("The size of a short is: %lu.\n", (unsigned long)sizeof(s));
-        printf("The size of a char is: %lu.\n", (unsigned long)sizeof(c)
+	printf("Size of int: %zu bytes\n", sizeof(int));
+	printf("Size of float: %zu bytes\n", sizeof(float));
+	printf("Size of double: %zu bytes\n", sizeof(double));
+	printf("Size of char: %zu bytes\n", sizeof(char));
+	printf("Size of long: %zu bytes\n", sizeof(long));
+	printf("Size of short: %zu bytes\n", sizeof(short));	
 	return (0);
 }
 
