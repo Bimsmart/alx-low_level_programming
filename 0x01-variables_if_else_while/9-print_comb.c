@@ -13,9 +13,10 @@ int main(void)
 		putchar(d + '0');
 	if (d != 9)
 	{
-		putchar(',\n');
+		putchar(',');
 		putchar(' ');
 	}
 	}
+	putchar('\n');
 	return (0);
 }
