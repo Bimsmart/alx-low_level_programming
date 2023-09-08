@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - This is the Main function
+1-last_digit.c * main - This is the Main function
  *
  * Return: Always 0 (Success)
  */
