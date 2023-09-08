@@ -1,18 +1,13 @@
 #include <stdio.h>
-
-/*find the size of various types*/
-
+/**
+ * main - a main function
+ * return: Always 0 (Success)
+ */
 int main(void)
 {
-	char c;
-	int i;
-	double d;
-	float f;
-
-	printf("Size of a char: %zu bytes \n", sizeof(c));
-	printf("Size of an int: %zu bytes \n", sizeof(i));
-	printf("Size of a long int: %zu bytes \n", sizeof(long int);
-	printf("Size of a long long int: %zu bytes \n", sizeof(long long int));
-	printf("Size of a float: %zu bytes \n", sizeof(float));	
-	return (0);
+	printf("Size of a char: %ld bytes\n", sizeof(char));
+	printf("Size of a int: %ld bytes\n", sizeof(int));
+	printf("Size of a long int: %ld bytes\n", sizeof(long int));
+	printf("Size of a long long: %ld bytes\n", sizeof(long long));
+	printf("Size of a float: %ld bytes\n", sizeof(float);
 }
