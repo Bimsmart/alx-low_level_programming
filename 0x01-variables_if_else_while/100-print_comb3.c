@@ -6,21 +6,22 @@
  */
 int main(void)
 {
-	int i, j;
+	int i = 0;
 
-	for (i = 0; i < 10; i++)
+	while (i < 99)
 	{
-		for (j = 0; j < 10; j++)
+		if (i / 10 < i % 10)
 		{
-			putchar(i + '0');
-			putchar(j + '0');
-			if (i != 8 || j != 9)
-			{
-				putchar(',');
-				putchar(' ');
-			}
+			putchar(i / 10 + '0');
+			putchar(i % 10 + '0');
+		if (i != 89)
+		{
+			putchar(',');
+			putchar(' ');
 		}
+		}
+		i++;
 	}
-	putchar('\n');
 	return (0);
+
 }
