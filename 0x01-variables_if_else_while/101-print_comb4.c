@@ -23,11 +23,6 @@ int main(void)
 		}
 		i++;
 	}
-	putchar(789 / 100 + '0');
-	putchar((789 / 10) % 10 + '0');
-	putchar(789 % 10 + '0');
-
 	putchar('\n');
 	return (0);
 }
-
