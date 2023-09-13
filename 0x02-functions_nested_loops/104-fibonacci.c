@@ -17,7 +17,7 @@ int main(void)
 	printf("%lu", b);
 	for (i = 1; i < 91; i++)
 	{
-		printf("%lu ", a);
+		printf(",%lu ", a);
 		a += b;
 		b = a - b;
 	}
