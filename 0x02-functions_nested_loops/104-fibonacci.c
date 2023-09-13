@@ -25,7 +25,7 @@ int main(void)
 	b1 = (b / l);
 	b2 = (b % l);
 	a1 = (a / l);
-	a2 = (a / l);
+	a2 = (a % l);
 
 	for (i = 92; i < 99; ++i)
 	{
