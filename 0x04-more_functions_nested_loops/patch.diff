@@ -1,0 +1,28 @@
+--- src	1969-12-31 16:00:00.000000000 -0800
++++ 5-more_numbers.c	2023-09-14 11:20:20.862773211 -0700
+@@ -0,0 +1,25 @@
++#include "main.h"
++/**
++ * more_numbers - prints  numbers ten times
++ * Return: void
++ */
++
++void more_numbers(void)
++{
++	int i;
++	int j;
++
++	for (i = 0; i < 10; i++)
++	{
++		for (j = 0; j <= 14; j++)
++		{
++			if ( j > 9)
++				_putchar(j / 10 + '0');
++			_putchar(j % 10 + '0');
++		}
++		_putchar('\n');
++
++	}
++}
++			
++
