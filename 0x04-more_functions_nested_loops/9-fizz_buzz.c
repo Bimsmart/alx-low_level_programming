@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * main - This is a function
- * Return: 0
+ * main - this is a function prints 1 -100 but multiples of 3 and 5 as fizz buzz
+ * Return: Always 0 (Success)
  */
 
 int main(void)
@@ -31,8 +31,7 @@ int main(void)
 		{
 			printf(" %d", i);
 		}
-
-
 	}
 	printf("\n");
+	return (0);
 }
