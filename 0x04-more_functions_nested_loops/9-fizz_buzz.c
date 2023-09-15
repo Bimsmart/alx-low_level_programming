@@ -1,7 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * main - this is a function prints 1 -100 but multiples of 3 and 5 as fizz buzz
+ * main - this is a function prints 1 -100 but
+ * multiples of 3 and 5 as fizz buzz
  * Return: Always 0 (Success)
  */
 
