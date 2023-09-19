@@ -14,6 +14,10 @@ int _atoi(char *s)
 	{	sign = -1;
 		m++;
 	}
+	else if (s[0] == '+')
+	{
+		m++;
+	}
 	while (s[m] != '\0')
 	{
 		if (s[m] >= '0' && s[m] <= '9')
