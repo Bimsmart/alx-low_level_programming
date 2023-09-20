@@ -2,12 +2,12 @@
 #include <string.h>
 /**
  * _strncat - this function concatenates two string
- * and the length must not exceed the length of the second 
+ * and the length must not exceed the length of the second
  * @desc: the destination
  * @ the source string
  * return: *desc
  */
- char *_strncat(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
 	int length = strlen(dest);
 	int i;
