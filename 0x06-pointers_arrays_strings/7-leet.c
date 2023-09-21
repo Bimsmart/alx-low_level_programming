@@ -14,6 +14,7 @@ char *leet(char *str)
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		int k = strlen(n_chars);
+
 		for (j = 0; j < k ; j++)
 		{
 			if (str[i] == n_chars[j] || str[i] == n_chars[j] - 32)
