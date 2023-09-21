@@ -1,43 +1,26 @@
 #include "main.h"
 #include <string.h>
-#include <stdlib.h>
 /**
  *  leet - this encodes a string
- *  @s: a string
+ *  @str: a string
  *  Return: Always 0 (Success)
  */
-char *leet(char *s)
+char *leet(char *str)
 {
 	int i, j;
-	char *en = (char *)malloc(strlen(s) + 1);
+	char *l_chars = "43107";
+	char *n_chars = "aeotl";
 
-		strcpy(en, s);
-
-	for (i = 0; en[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (j = 0; j < 5; j++)
+		int k = strlen(n_chars);
+		for (j = 0; j < k ; j++)
 		{
-			if (en[i] == 'a' || en[i] == 'A')
-			{
-				en[i] = '4';
-			}
-			if (en[i] == 'e' || en[i] == 'E')
-			{
-				en[i] = '3';
-			}
-			else if (en[i] == 'o' || en[i] == 'O')
-			{
-				en[i] = '0';
-			}
-			else if (en[i] == 't' || en[i]  == 'T')
-			{
-				en[i] = '7';
-			}
-			else if (en[i] == 'l' || en[i] == 'L')
-			{
-				en[i] = '1';
+			if (str[i] == n_chars[j] || str[i] == n_chars[j] - 32)
+			{	str[i] = l_chars[j];
+				break;
 			}
 		}
 	}
-	return (en);
+		return (str);
 }
