@@ -22,8 +22,6 @@ void rev_string(char *n)
 		*(n + i) = temp;
 	}
 }
-
-
 /**
  * infinite_add - this adds two numbers
  * @n1: first number
@@ -34,18 +32,13 @@ void rev_string(char *n)
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int excess = 0;
-	int i = 0, j = 0, d = 0;
+	int excess = 0, i = 0, j = 0, d = 0;
 	int v1 = 0, v2 = 0, temp_sum = 0;
 
 	while (*(n1 + i) != '\0')
-	{
 		i++;
-	}
 	while (*(n2 + j) != '\0')
-	{
 		j++;
-	}
 	i--;
 	j--;
 
