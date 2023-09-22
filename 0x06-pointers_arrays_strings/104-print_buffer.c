@@ -1,10 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print buffer - this function orints a buffer
+ * print_buffer - this function orints a buffer
  * @b: a pointer to a buffer
  * @size: size of the buffer
- * Return: 0 (Always)
+ * Return: void
  */
 void print_buffer(char *b, int size)
 {
@@ -22,18 +22,18 @@ void print_buffer(char *b, int size)
 	{
 		q = size - p < 10 ? size - p : 10;
 		printf("%08x: ", p);
-		for (r = 0; r < 10; r++)
-		{
+	for (r = 0; r < 10; r++)
+	{
 		if (r < q)
-		printf("%02x", *(b + p + r));
+			printf("%02x", *(b + p + r));
 		else
-		printf(" ");
+			printf(" ");
 		if (r % 2)
 		{
-		printf(" ");
+			printf(" ");
 		}
 	}
-		for (r = 0; r < q; r++)
+	for (r = 0; r < q; r++)
 	{
 		int c = *(b + p + r);
 	if (c < 32 || c > 132)
