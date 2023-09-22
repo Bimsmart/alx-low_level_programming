@@ -24,11 +24,11 @@ void print_buffer(char *b, int size)
 		printf("%08x: ", p);
 		for (r = 0; r < 10; r++)
 		{
-		if (r > q)
+		if (r < q)
 		printf("%02x", *(b + p + r));
 		else
 		printf(" ");
-		if (q % 2)
+		if (r % 2)
 		{
 		printf(" ");
 		}
