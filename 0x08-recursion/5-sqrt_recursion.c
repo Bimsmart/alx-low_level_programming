@@ -14,9 +14,10 @@ int _sqrt_recursion(int n)
  * _sqrt - computes the natural square-root of a number
  * @n: an integer
  * @c: counter
+ * Return: -1 , c 
  */
- int _sqrt(int n, int c)
- {	
+int _sqrt(int n, int c)
+{
 	int sqrt = c * c;
 
 	if (sqrt > n)
