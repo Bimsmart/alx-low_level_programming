@@ -17,9 +17,10 @@ int _strlen_recursion(char *s)
 }
 
 /**
- * compare : this compares the characters of a string
+ * compare -  this compares the characters of a string
  * @a: smallesst iteration
  * @b: largest iteration
+ * @s: a string
  * Return: 0 or 1
  */
 
