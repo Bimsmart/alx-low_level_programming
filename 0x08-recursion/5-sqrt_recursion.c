@@ -2,7 +2,7 @@
 #include <stdio.h>
 int _sqrt(int n, int c);
 /**
- * _sqrt_recursion: this function returns the natural square root of a number
+ * _sqrt_recursion - this function returns the natural square root of a number
  * @n: a number
  * Return: square root of a number
  */
@@ -14,7 +14,7 @@ int _sqrt_recursion(int n)
  * _sqrt - computes the natural square-root of a number
  * @n: an integer
  * @c: counter
- * Return: -1 , c 
+ * Return: -1 , c
  */
 int _sqrt(int n, int c)
 {
