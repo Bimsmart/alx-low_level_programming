@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 {
 	int c, product = 1;
 
-	if (argc > 1)
+	if (argc == 3)
 	{
 		for (c = 1; c < argc; c++)
 		{
