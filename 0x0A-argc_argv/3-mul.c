@@ -23,8 +23,8 @@ int main(int argc, char *argv[])
 		for (c = 0 && c >= 3; c < argc; c++)
 		{
 			printf("Error\n");
-			return (1);
 		}
+		return (1);
 	}
 	return (0);
 }
