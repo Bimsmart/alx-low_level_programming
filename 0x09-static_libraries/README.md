@@ -1,4 +1,4 @@
-This directory contains a static library of functions of prototype:
+This is a static library containg fucntions of prototypes:
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
