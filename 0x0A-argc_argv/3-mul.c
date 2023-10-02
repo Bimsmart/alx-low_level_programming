@@ -8,13 +8,17 @@
  */
 int main(int argc, char *argv[])
 {
-	int c, product = 1;
+	int c, product;
 
 	if (argc == 3)
 	{
+		int a, b;
+
 		for (c = 1; c < argc; c++)
 		{
-			product *= atoi(argv[c]);
+			a = atoi(argv[1]);
+			b = atoi(argv[2]);
+			product = a * b;
 		}
 		printf("%d\n", product);
 	}
