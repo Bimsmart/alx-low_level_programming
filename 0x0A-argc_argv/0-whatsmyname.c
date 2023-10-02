@@ -3,11 +3,11 @@
 /**
  * main - this is the main function
  * @argc: argument to count
- * @argv[]: a pointer to a string
+ * @argv: a pointer to a string
  * Return: 0 (Always)
  */
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int c = 0;
 
