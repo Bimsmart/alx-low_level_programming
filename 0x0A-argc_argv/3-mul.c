@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		for (c = 0 && c >= 3; c < argc; c++)
+		for (c = 0; c < argc; c++)
 		{
 			printf("Error\n");
 		}
