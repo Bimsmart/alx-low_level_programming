@@ -9,35 +9,27 @@
  */
 char *_strdup(char *str)
 {
-	char *ptr, p;
-	unsigned int n;
+	char *ptr;
+	int n, i = 0;;
 
-	ptr = &p;
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	n = 0;
 	while (str[n] != '\0')
 	{
 		n++;
 	}
 	/**n = strlen(str);*/
-	ptr = (char *)malloc((n * sizeof(char)) + 1);
-	ptr = strdup(str);
-	if (str == NULL)
+	ptr = (char *)malloc(sizeof(char) * (n + 1));
+	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-	else
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (ptr == NULL)
-		{
-			return (NULL);
-		}
-		else
-		{
-			for (ptr[n] = 0; ptr[n] != '\0'; n++)
-			{
-				ptr[n] = str[n];
-			}
-		}
+		ptr[i] = str[i];
 	}
 	return (ptr);
 	free(ptr);
