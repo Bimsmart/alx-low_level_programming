@@ -18,7 +18,6 @@ char *_strdup(char *str)
 	{
 		n++;
 	}
-	
 	/**n = strlen(str);*/
 	ptr = (char *)malloc((n * sizeof(char)) + 1);
 	ptr = strdup(str);
@@ -34,8 +33,12 @@ char *_strdup(char *str)
 		}
 		else
 		{
-			return (ptr);
+			for (ptr[n] = 0; ptr[n] != '\0'; n++)
+			{
+				ptr[n] = str[n];
+			}
 		}
 	}
+	return (ptr);
 	free(ptr);
 }
