@@ -22,25 +22,25 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s2[b])
 		b++;
 	if (n >= b)
-		c = a + b;
+		d = a + c;
 	else
-		c = a + n;
-	ps = malloc(sizeof(char) * (c + 1));
+		d = a + n;
+	ps = malloc(sizeof(char) * (d + 1));
 	if (ps == NULL)
 	{
 		return (NULL);
 	}
 	b = 0;
-	while (d <= c)
+	while (c <= d)
 	{
-		if (d <= a)
-			ps[d] = s1[d];
-		if (d >= a)
+		if (c <= a)
+			ps[c] = s1[c];
+		if (c >= a)
 		{
-			ps[d] = s2[b];
+			ps[c] = s2[b];
 			b++;
 		}
-		d++;
+		c++;
 	}
 	return (ps);
 }
