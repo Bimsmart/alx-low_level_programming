@@ -1,100 +1,41 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
- * _is_digit - this fuctoion checks for digits
- * str: the string
- * Return 1 , 0
- */
-int _isdigit(char *str)
-{
-	int c = 0;
-
-	while (str[c])
-	{
-		if (str[c] < '0' || str[c] > '9')
-		{
-			return (0);
-			c++;
-		}
-	}
-	return (1);
-}
-/**
- * _error -  function prints an error
- */
-void _error(void)
-{
-	printf("Error");
-	exit(98);
-}
-/**
- * stringLength - this returns the length of a string
- * @str: the string whose length is to be evaluated
- * Return: length of string
- */
-int _stringlength(char *str)
-{
-	int k = 0;
-
-	while (str[k] != '\0')
-	{
-		k++;
-	}
-	return (k);
-}
-/**
- * main - this function multiplies two integers
- * @argc: this is the counter
- * @argv: this is th argument to a pointer to a string
- * Return: 0
+ * main: the main entry
+ * @argv: argument to a pointer to a string 
+ * @argc: argument to counter
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2, c, p, l1, l2, *res, size, e = 0;
-	char *str1, *str2;
+	char *num1, *num2;
+	int c;
+	long int res;	
 
-	str1 = argv[1];
-	str2 = argv[2];
-	if (argc != 3 || !_isdigit(str1) || !_isdigit(str2))
+	if (argc != 3)
 	{
-		_error();
+		printf("Error\n");
+		exit(98);
 	}
-	l1 = _stringlength(str1), l2 = _stringlength(str2);
-	size = l1 + l2 + 1;
-	res = malloc(sizeof(int) * size);
-	if (!res)
-		return (1);
-	for(c = 0; c <= l1 + l2; c++)
+	num1 = argv[1];
+	num2 = argv[2];
+	for (c = 0; num1[c] != '\0'; c++)
 	{
-		res[c] = 0;
-	}
-	for (l1 = l1 - 1; l1 >= 0; l1--)
-	{
-		num1 = str1[l1] - '0';
-		p = 0;
-		m = l1 + l2 + 1;
-		for (l2 = _stringlength(str2) - 1; l2 >= 0; l2--)
+		if (!isdigit(num1[c]))
 		{
-			num2 = str2[l2] - '0';
-			p = p + res[m] + (num1 * num2);
-			res[m] = p % 10;
-			p = p / 10;
+			printf("Error\n");
+			return (98);
 		}
-		if (p > 0)
-			res[m] = res[m] + p;
 	}
-	for (c = 0; c < size - 1; c++)
+	for (c = 0; num2[c] != '\0'; c++)
 	{
-		if (res[c])
-			e = 1;
-		if (e)
-			_putchar(res[c] + '0');
+		if (!isdigit(num2[c]))
+		{
+			printf("Error\n");
+			return 98;
+		}
 	}
-	if (!e)
-		_putchar('0');
-	_putchar('\n');
-	free(res);
+	res = atoll(num1) * atol(num2);
+	printf("%ld\n", res);
 	return (0);
-}
-
+}	
