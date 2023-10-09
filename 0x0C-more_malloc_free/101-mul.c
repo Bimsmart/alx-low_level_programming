@@ -2,15 +2,15 @@
 #include <stdlib.h>
 #include <ctype.h>
 /**
- * main: the main entry
- * @argv: argument to a pointer to a string 
- * @argc: argument to counter
+ * main - the main entry
+ * @argv: argument to a pointer to a string @argc: argument to counter
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
 	char *num1, *num2;
 	int c;
-	long int res;	
+	long int res;
 
 	if (argc != 3)
 	{
@@ -32,10 +32,10 @@ int main(int argc, char *argv[])
 		if (!isdigit(num2[c]))
 		{
 			printf("Error\n");
-			return 98;
+			return (98);
 		}
 	}
-	res = atoll(num1) * atol(num2);
+	res = atoi(num1) * atoi(num2);
 	printf("%ld\n", res);
 	return (0);
-}	
+}
