@@ -31,8 +31,8 @@ int main(int argc, char *argv[])
 			printf("%02hhx\n", add[c]);
 			break;
 		}
-		printf("%02hhx\n", add[c]);
 		c++;
+		printf("%02hhx\n", add[c]);
 	}
 	return (0);
 }
