@@ -4,7 +4,7 @@
  * main - the main entry
  * @argc: argument to count
  * @argv: argument to pointer to a string
- * Return: 0
+ * Return: Always 0 Success
  */
 int main(int argc, char *argv[])
 {
@@ -23,15 +23,13 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 	add = (char *)main;
-	c = 0;
-	while (c < num_bytes)
+	for (c = 0; c < num_bytes; c++)
 	{
 		if (c == num_bytes - 1)
 		{
 			printf("%02hhx\n", add[c]);
 			break;
 		}
-		c++;
 		printf("%02hhx\n", add[c]);
 	}
 	return (0);
