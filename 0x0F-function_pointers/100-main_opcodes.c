@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - the main entry
+ * main - this function prints its own opcodes
  * @argc: argument to count
  * @argv: argument to pointer to a string
  * Return: Always 0 Success
