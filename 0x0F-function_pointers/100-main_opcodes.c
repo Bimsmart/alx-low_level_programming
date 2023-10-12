@@ -8,8 +8,9 @@
  */
 int main(int argc, char *argv[])
 {
-	char *add;
+	unsigned char opcode;
 	int num_bytes, c;
+	int (*add)(int, char **) = main;
 
 	if (argc != 2)
 	{
@@ -22,15 +23,15 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	add = (char *)main;
 	for (c = 0; c < num_bytes; c++)
 	{
+		opcode = *(unsigned char *)add;
+		printf("%.2x", opcode);
 		if (c == num_bytes - 1)
-		{
-			printf("%02hhx\n", add[c]);
-			break;
-		}
-		printf("%02hhx\n", add[c]);
+			continue;
+		printf(" ");
+		add++;
 	}
+	printf("\n");
 	return (0);
 }
