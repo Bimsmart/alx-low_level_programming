@@ -4,7 +4,7 @@
  * add_node - this function adds a new node at the beginning of a linked list
  * @head: the starting of the linked
  * @str: string to be stored
- * Returns:  a pointer to head
+ * Return:  a pointer to head
  */
 list_t *add_node(list_t **head, const char *str)
 {
