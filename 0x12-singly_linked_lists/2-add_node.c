@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * add_node - this function adds a new node at the beginning of a linked list
- * @head: the starting of the linked 
+ * @head: the starting of the linked
  * @str: string to be stored
  * Returns:  a pointer to head
  */
