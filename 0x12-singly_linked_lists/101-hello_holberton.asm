@@ -5,7 +5,7 @@ section .text
 
 _start:
 	;Write the message to standard output
-	mov rax, 1	
+	mov rax, 1
 	mov rdi, 1	; System call number for write
 	mov rsi, message	; Address of the message
 	mov rdx, 16	; Length of the message
