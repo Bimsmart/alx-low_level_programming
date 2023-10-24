@@ -1,4 +1,6 @@
 #include "lists.h"
+size_t loops_listint_len(const listint_t *head);
+size_t print_listint_safe(const listint_t *head);
 /**
  * loops_listint_len - this function prints a listint_t list
  * @head: the head
@@ -6,8 +8,8 @@
  */
 size_t loops_listint_len(const listint_t *head)
 {
-        const listint_t *not_fast, *fast;
-        size_t nodes = 1;
+	const listint_t *not_fast, *fast;
+	size_t nodes = 1;
 
 	if (head == NULL || head->next == NULL)
 		return (0);
@@ -33,12 +35,12 @@ size_t loops_listint_len(const listint_t *head)
 			return (nodes);
 		}
 		not_fast = not_fast->next;
-		fast =(fast->next)->next;
+		fast = (fast->next)->next;
 	}
-	return (0);		
+	return (0);
 }
 /**
- * printe_listint_safe - this function prints a listint_t list
+ * print_listint_safe - this function prints a listint_t list
  * @head: the head
  * Return: the number of nodes in the list
  */
@@ -60,9 +62,9 @@ size_t print_listint_safe(const listint_t *head)
 		for (in = 0; in < nodes; in++)
 		{
 			printf("[%p] %d\n", (void *)head, head->n);
-                        head = head->next;
+			head = head->next;
 		}
 	printf("-> [%p] %d\n", (void *)head, head->n);
 	}
-	return (nodes);	
+	return (nodes);
 }

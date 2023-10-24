@@ -1,5 +1,6 @@
 #include "lists.h"
-/** free_listint_safe - this function frees a linked list
+/**
+ * free_listint_safe - this function frees a linked list
  * @h: the head
  * Return:the number pof elements inthe freed list
  */
