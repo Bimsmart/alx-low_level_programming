@@ -9,6 +9,7 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int i = 0;
 	hash_node_t  *con;
 	int not_fin = 0;
+
 	if (!ht)
 		return;
 	printf("{");
@@ -21,7 +22,8 @@ void hash_table_print(const hash_table_t *ht)
 				printf(", ");
 			printf("'%s': '%s'", con->key, con->value);
 			not_fin = 1;
-			con = con->next;}
+			con = con->next;
+		}
 	}
 	printf("}\n");
 }
